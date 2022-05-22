@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css">
+    <title>Bases de Datos con Python</title>
+</head>
+    <body>
+        <h1>Mostrar</h1>
+        <table id="country">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Continent</th>
+                    <th>Region</th>
+                    <th>Surface Area</th>
+                    <th>Indep Year</th>
+                    <th>Population</th>
+                    <th>Life Expectancy</th>
+                    <th>GNP</th>
+                    <th>GNPOld</th>
+                    <th>Local Name</th>
+                    <th>Government Form</th>
+                    <th>Head Of State</th>
+                    <th>Capital</th>
+                    <th>Code 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for country in countrys  %}
+                <tr>
+                    <td>{{country.Code }}</td>
+                    <td>{{country.Name }}</td>
+                    <td>{{country.Continent }}</td>
+                    <td>{{country.Region }}</td>
+                    <td>{{country.SurfaceArea }}</td>
+                    <td>{{country.IndepYear }}</td>
+                    <td>{{country.Population }}</td>
+                    <td>{{country.LifeExpectancy }}</td>
+                    <td>{{country.GNP }}</td>
+                    <td>{{country.GNPOld }}</td>
+                    <td>{{country.LocalName }}</td>
+                    <td>{{country.GovernmentForm }}</td>
+                    <td>{{country.HeadOfState }}</td>
+                    <td>{{country.Capital }}</td>
+                    <td>{{country.Code2 }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+    <style type="text/css">
+        #country{
+            border-collapse: collapse;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        #country td, #country th 
+        {
+            border: 1px;
+            padding: 8px;
+            width: 25%;
+        }          
+        #country th 
+        {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            text-align: left;
+            width: 50%;
+        }
+    </style>
+</html>
